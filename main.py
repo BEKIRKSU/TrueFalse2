@@ -1,6 +1,7 @@
 from question_model import Question
 # Question class from that file imported.
 from data import question_data
+from quiz_brain import QuizBrain
 
 question_bank = []
 for question in question_data:
@@ -10,3 +11,6 @@ for question in question_data:
     # You can get rid of the "named" parameters and just have them as positional parameters.
     question_bank.append(new_question)
 
+# So we make a new QuizBrain object and when initialising pass ina  list of questions.
+quiz = QuizBrain(question_bank)
+quiz.next_question()
