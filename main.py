@@ -13,4 +13,6 @@ for question in question_data:
 
 # So we make a new QuizBrain object and when initialising pass ina  list of questions.
 quiz = QuizBrain(question_bank)
-quiz.next_question()
+
+while quiz.still_has_questions():
+    quiz.next_question()
